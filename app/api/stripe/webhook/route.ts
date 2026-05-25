@@ -9,12 +9,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 })
 
 export const dynamic = 'force-dynamic'
-export const config = {
-  api: {
-    bodyParser: false
-  }
-}
-
+export const runtime = 'nodejs'
 async function getRawBody(request: Request): Promise<Buffer> {
   const chunks = []
   for await (const chunk of request.body as any) {
