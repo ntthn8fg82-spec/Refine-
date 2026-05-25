@@ -64,7 +64,7 @@ export async function POST(request: Request) {
             plan: session.metadata?.plan || 'standard',
             stripe_customer_id: session.customer as string,
             stripe_subscription_id: subscription.id,
-            words_limit: PLANS[session.metadata?.plan as keyof typeof PLANS]?.words_limit,
+            words_limit: PLANS[session.metadata?.plan as keyof typeof PLANS]?.wordLimit,
             trial_ends_at: subscription.trial_end ? 
               new Date(subscription.trial_end * 1000).toISOString() : null
           })
