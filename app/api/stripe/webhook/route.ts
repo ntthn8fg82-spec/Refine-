@@ -101,7 +101,7 @@ export async function POST(request: Request) {
           .from('profiles')
           .update({
             plan: 'free',
-            words_limit: PLANS.free.words_limit,
+            words_limit: PLANS.FREE.wordLimit,
             stripe_subscription_id: null
           })
           .eq('stripe_subscription_id', subscription.id)
