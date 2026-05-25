@@ -32,7 +32,7 @@ export default function SignUpPage() {
       <div className="w-full max-w-md bg-bg-surface rounded-xl p-8 shadow-lg">
         <h1 className="text-2xl font-bold font-syne text-text-primary mb-6">Create Account</h1>
         
-        <form action={handleSignUp} className="space-y-4 font-dm-sans">
+        <form action={handleSignUp as any} className="space-y-4 font-dm-sans">
           <div>
             <label htmlFor="fullName" className="block text-sm text-text-secondary mb-1">
               Full Name
