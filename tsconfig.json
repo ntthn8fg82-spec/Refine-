@@ -15,8 +15,12 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+
     "jsx": "preserve",
-    "plugins": [
+"paths": {
+  "@/*": ["./*"]
+},
+"plugins": [
       {
         "name": "next"
       }
