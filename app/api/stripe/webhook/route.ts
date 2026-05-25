@@ -22,7 +22,7 @@ export async function POST(request: Request) {
   const body = await getRawBody(request)
   const signature = request.headers.get('stripe-signature')!
   
-  let event: Stripe.Event
+  let event: any
 
   try {
     event = stripe.webhooks.constructEvent(
