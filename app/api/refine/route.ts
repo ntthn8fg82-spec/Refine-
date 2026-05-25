@@ -114,7 +114,7 @@ ${inputText}`
       messages: [{ role: 'user', content: prompt }],
     })
 
-    const refinedText = response.content[0].text
+    const refinedText = (response.content[0] as any).text
     const outputWordCount = countWords(refinedText)
     const inputWordCount = countWords(inputText)
 
