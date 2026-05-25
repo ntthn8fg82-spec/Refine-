@@ -26,7 +26,7 @@ export default function LoginPage() {
       <div className="w-full max-w-md bg-bg-surface rounded-xl p-8 shadow-lg">
         <h1 className="text-2xl font-bold font-syne text-text-primary mb-6">Log In</h1>
         
-        <form action={handleLogin} className="space-y-4 font-dm-sans">
+        <form action={handleLogin as any} className="space-y-4 font-dm-sans">
           <div>
             <label htmlFor="email" className="block text-sm text-text-secondary mb-1">
               Email
