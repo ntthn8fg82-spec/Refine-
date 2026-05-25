@@ -96,7 +96,7 @@ export async function POST(request: Request) {
   // 4. Create checkout session
   try {
     // Build checkout session params conditionally
-    const sessionParams: Stripe.Checkout.SessionCreateParams = {
+    const sessionParams:any = {
       payment_method_types: ['card'],
       mode: 'subscription',
       customer: customerId,
