@@ -74,7 +74,7 @@ export async function POST(request: Request) {
       }
 
       case 'customer.subscription.updated': {
-        const subscription = event.data.object as Stripe.Subscription
+        const subscription = event.data.object as any
         const planId = subscription.items.data[0].price.id
         const plan = 
           planId === process.env.STRIPE_LITE_PRICE_ID ? 'lite' :
